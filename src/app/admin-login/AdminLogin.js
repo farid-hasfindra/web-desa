@@ -9,17 +9,26 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    const res = await fetch("/api/admin/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
-    });
-    const data = await res.json();
-    if (data.success) {
-      // TODO: redirect to dashboard admin
-      window.location.href = "/admin-dashboard";
-    } else {
-      setError(data.error || "Login gagal.");
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (err) {
+        setError("Server error: Response tidak valid.");
+        return;
+      }
+      if (res.ok && data.success) {
+        window.location.href = "/admin-dashboard";
+      } else {
+        setError(data.error || "Login gagal.");
+      }
+    } catch (err) {
+      setError("Gagal terhubung ke server.");
     }
   };
 
