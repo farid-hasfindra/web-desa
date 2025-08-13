@@ -9,9 +9,10 @@ const navItems = [
   { href: "/galeri-desa", label: "Galeri Desa" },
 ];
 
+
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white shadow-md py-4 px-6 flex justify-center sticky top-0 z-50 animate-slide-down">
+    <nav className="w-full bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50 animate-slide-down">
       <ul className="flex gap-4 md:gap-8">
         {navItems.map((item) => (
           <li key={item.href}>
@@ -21,6 +22,9 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      <Link href="/admin-login" className="ml-4 px-4 py-2 bg-green-600 text-white rounded-full shadow hover:bg-green-700 transition-colors duration-300 font-semibold">
+        Login Admin
+      </Link>
     </nav>
   );
 }

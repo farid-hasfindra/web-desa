@@ -7,7 +7,10 @@ export default function Home() {
         <img src="/file.svg" alt="Logo Desa" className="w-24 h-24 mb-4 rounded-full shadow-lg" />
         <h1 className="text-4xl md:text-5xl font-bold text-green-700 mb-2">Desa Maju Sejahtera</h1>
         <p className="text-lg md:text-xl text-gray-700 mb-6">Profil Desa Modern, Informatif, dan Interaktif</p>
-        <a href="#profil" className="px-6 py-2 bg-green-600 text-white rounded-full shadow hover:bg-green-700 transition">Lihat Profil Desa</a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#profil" className="px-6 py-2 bg-green-600 text-white rounded-full shadow hover:bg-green-700 transition">Lihat Profil Desa</a>
+          <a href="/admin-login" className="px-6 py-2 bg-white text-green-700 border border-green-600 rounded-full shadow hover:bg-green-50 transition">Login Admin</a>
+        </div>
       </section>
 
       {/* Profil Desa */}
