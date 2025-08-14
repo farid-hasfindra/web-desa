@@ -2,11 +2,12 @@ import Link from "next/link";
 
 const adminNavItems = [
   { href: "/admin-dashboard", label: "Dashboard" },
-  { href: "/admin-beranda", label: "Edit Beranda" },
-  { href: "/admin-perangkat", label: "Edit Perangkat Desa" },
-  { href: "/admin-tentang", label: "Edit Tentang Desa" },
-  { href: "/admin-potensi", label: "Edit Potensi Desa" },
-  { href: "/admin-galeri", label: "Edit Galeri Desa" },
+  { href: "/admin-dashboard/edit-beranda", label: "Edit Beranda" },
+  { href: "/admin-dashboard/edit-perangkat-desa", label: "Edit Perangkat Desa" },
+  { href: "/admin-dashboard/edit-tentang-desa", label: "Edit Tentang Desa" },
+  { href: "/admin-dashboard/edit-potensi-desa", label: "Edit Potensi Desa" },
+  { href: "/admin-dashboard/edit-galeri-desa", label: "Edit Galeri Desa" },
+  { href: "/admin-dashboard/edit-pelayanan-desa", label: "Edit Pelayanan Desa" },
   // Tambahkan menu lain sesuai kebutuhan
 ];
 
@@ -22,7 +23,7 @@ export default function AdminNavbar() {
           </li>
         ))}
       </ul>
-      <Link href="/beranda" className="ml-4 px-4 py-2 bg-white text-green-700 rounded-full shadow hover:bg-green-100 transition-colors duration-300 font-semibold">
+      <Link href="/" className="ml-4 px-4 py-2 bg-white text-green-700 rounded-full shadow hover:bg-green-100 transition-colors duration-300 font-semibold">
         Keluar
       </Link>
     </nav>
