@@ -59,8 +59,7 @@ export default function Home() {
         ) : (
           <img src="/peta-desa.png" alt="Peta Wilayah Desa" className="w-full max-w-md mx-auto rounded-lg shadow mb-6 transition-all duration-500 hover:scale-105" />
         )}
-        <h2 className="text-2xl font-semibold text-green-700 mb-4 mt-8">Sejarah Singkat Desa</h2>
-        <p className="text-gray-700">{content.sejarah || "Desa Maju Sejahtera berdiri sejak tahun 1950, berawal dari komunitas petani yang kemudian berkembang menjadi desa mandiri dengan berbagai potensi lokal. Desa ini dikenal dengan semangat gotong royong dan inovasi masyarakatnya."}</p>
+        <p className="text-gray-700">{content.sejarah || "Kampung Tualang Timur Merupakan Pemekaran Dari kampung Tualang, Berawal dari Akhir Desember 1989 masyarakat membuka Lahan yang di namai jalan BAKAL yaitu jalan setapak di dalam hutan yang sering di lewati oleh hewan-hewan liar seperti gajah, harimau, Badak, Tapir, babi, Kijang Dan berbagai macam Hewan Liar Lainnya, makanya sampai saat ini masih di sebut Kampung Bakal, karna adanya Jalan di dalam Hutan."}</p>
       </section>
     </main>
   );
