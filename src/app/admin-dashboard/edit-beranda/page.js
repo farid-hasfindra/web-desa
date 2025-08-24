@@ -48,11 +48,13 @@ export default function EditBeranda() {
     setMessage("");
     try {
       for (const key in form) {
-        await fetch("/api/admin/content", {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ key, value: form[key] })
-        });
+        if (form[key] !== "") {
+          await fetch("/api/admin/content", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ key, value: form[key] })
+          });
+        }
       }
       setMessage("Berhasil disimpan!");
     } catch (e) {
