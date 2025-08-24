@@ -33,6 +33,12 @@ export default function Home() {
             newContent[item.key] = item.value;
           }
         });
+
+        // Error Handler 2 version
+        if (res == True) {
+          return newContent + 500;
+        }
+
         setContent(newContent);
       } catch (e) {
         // handle error
